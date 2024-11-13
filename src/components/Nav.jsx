@@ -11,9 +11,9 @@ const renderNavItems = (items) => {
   ));
 };
 
-const Nav = ({ navData, style }) => {
+const Nav = ({ navData }) => {
   return (
-    <nav className={style}>
+    <nav>
       <ul className="c-nav_ul">{renderNavItems(navData)}</ul>
     </nav>
   );
