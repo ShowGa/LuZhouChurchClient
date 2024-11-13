@@ -11,7 +11,9 @@ const Header = () => {
     <header>
       <div className="c-nav_container">
         <Nav navData={navListItemsLeft} style="c-header_left" />
+
         <div className="c-header_logo_container">Middle Content</div>
+
         <Nav navData={navListItemsRight} style="c-header_right" />
       </div>
     </header>
