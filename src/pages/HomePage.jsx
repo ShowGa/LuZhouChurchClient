@@ -46,7 +46,7 @@ const HomePage = () => {
                 variants={fadeIn("up", 0.2)}
                 initial="hidden"
                 whileInView="show"
-                className="text-8xl max-md:text-4xl"
+                className="text-8xl max-md:text-5xl"
                 viewport={{ once: true }}
               >
                 God's Word
@@ -73,10 +73,16 @@ const HomePage = () => {
                 human experience, and the purpose of life.
               </motion.p>
               <button className="font-bold border-2 rounded-full px-4 py-2 mt-2 hover:border-orange-500 duration-300">
-                參與我們
+                <a href="/join">參與我們</a>
               </button>
             </div>
           </div>
+
+          {/* deal with it later */}
+          {/* cards container */}
+          {/* <div className="c-hero_cards_container">
+            <div className="c-hero_cards_card"></div>
+          </div> */}
         </div>
       </section>
     </main>
