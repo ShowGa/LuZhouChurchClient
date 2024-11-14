@@ -12,31 +12,16 @@ import MobileNav from "./MobileNav";
 import "./css/componentCSS.css";
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   /* ============================ */
   /*        Helper function       */
   /* ============================ */
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <header className="c-header">
       {/* main nav bar */}
-      <div
-        className={`c-nav_container ${
-          isScrolled ? "c-nav_container_scrolled" : ""
-        }`}
-      >
+      <div className="c-nav_container">
         {/* left nav bar */}
         <div className="c-header_left">
           <div className="max-md:hidden">
