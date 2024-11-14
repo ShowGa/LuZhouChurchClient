@@ -25,7 +25,7 @@ ul {
   height: 5rem;
   position: relative;
   backdrop-filter: blur(20px);
-  background-color: rgba(37, 37, 37, 0.36);
+  background-color: rgba(37, 37, 37, 0.816);
 
   transition: all 0.5s ease;
 }
@@ -36,8 +36,8 @@ ul {
   flex-direction: row;
   align-items: center;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
   text-align: center;
 }
 
@@ -55,8 +55,9 @@ ul {
   margin-left: 8rem;
 
   /* flex-grow: 1; */
+  /* justify-content: space-between; */
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
   flex-basis: 50%;
 }
