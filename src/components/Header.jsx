@@ -2,13 +2,18 @@ import React, { useEffect, useState } from "react";
 
 import { navListItemsLeft, navListItemsRight } from "./consts/navListItems";
 
+import { RiMenuFill, RiCloseFill } from "react-icons/ri";
+
 import { img1 } from "../assets";
 
 import Nav from "./Nav";
+import MobileNav from "./MobileNav";
 
 import "./css/componentCSS.css";
 
 const Header = () => {
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
   return (
     <header className="c-header">
       {/* main nav bar */}
@@ -32,7 +37,18 @@ const Header = () => {
         {/* right nav bar */}
         <div className="c-header_right">
           <Nav navData={navListItemsRight} />
-          <ul className="mr-10 flex items-center">
+
+          <ul className="c-header_right_function_container">
+            <li className="flex items-center justify-center text-yellow-500 md:hidden">
+              <button onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}>
+                {isMobileNavOpen ? (
+                  <RiCloseFill className="text-3xl " />
+                ) : (
+                  <RiMenuFill className="text-3xl " />
+                )}
+              </button>
+            </li>
+
             {true ? (
               <li>
                 <img className="w-10 h-10 rounded-full" src={img1} alt="img1" />
@@ -45,6 +61,14 @@ const Header = () => {
       </div>
 
       {/* mobile nav bar */}
+      <div
+        className={`c-mobileNav_container md:hidden max-md:max-w-[70%] ${
+          isMobileNavOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <MobileNav navData={navListItemsLeft} />
+        <MobileNav navData={navListItemsRight} />
+      </div>
     </header>
   );
 };
