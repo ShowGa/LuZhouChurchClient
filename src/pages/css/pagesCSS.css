@@ -1,0 +1,42 @@
+/* ============================ Home Page ============================ */
+.c-hero_section_container {
+  width: 100%;
+
+  position: relative;
+}
+
+.c-hero_swiper-container {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+}
+
+.c-hero_section_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.c-hero_swiper-container .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.c-hero_swiper-container .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.c-hero_content_container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
