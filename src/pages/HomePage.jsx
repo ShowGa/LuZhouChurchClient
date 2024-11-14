@@ -7,6 +7,9 @@ import "swiper/css/bundle";
 import SwiperCore from "swiper";
 import { Navigation, Pagination, EffectFade, Autoplay } from "swiper/modules";
 
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motions";
+
 import "./css/pagesCSS.css";
 
 const HomePage = () => {
@@ -38,8 +41,40 @@ const HomePage = () => {
 
           {/* content container */}
           <div className="c-hero_content_container">
-            <div>
-              <h1></h1>
+            <div className="c-hero_content_text_container w-[50%] max-md:w-[80%]">
+              <motion.h1
+                variants={fadeIn("up", 0.2)}
+                initial="hidden"
+                whileInView="show"
+                className="text-8xl max-md:text-4xl"
+                viewport={{ once: true }}
+              >
+                God's Word
+              </motion.h1>
+              <motion.h3
+                variants={fadeIn("up", 0.2)}
+                initial="hidden"
+                whileInView="show"
+                className="text-3xl max-md:text-xl"
+                viewport={{ once: true }}
+              >
+                For Every Person
+              </motion.h3>
+              <hr className="w-full my-4 border-white" />
+              <motion.p
+                variants={fadeIn("down", 0.2)}
+                initial="hidden"
+                whileInView="show"
+                className="text-lg max-md:text-sm"
+                viewport={{ once: true }}
+              >
+                The Bible is the ultimate source of truth and guidance for every
+                person. It offers profound insights into the nature of God, the
+                human experience, and the purpose of life.
+              </motion.p>
+              <button className="font-bold border-2 rounded-full px-4 py-2 mt-2 hover:border-orange-500 duration-300">
+                參與我們
+              </button>
             </div>
           </div>
         </div>
@@ -57,3 +92,5 @@ export default HomePage;
 // create the Biblical scriptures cards component later
 
 // create the  cards component later
+
+// framer motion check on another project
