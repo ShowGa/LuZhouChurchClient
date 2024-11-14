@@ -24,10 +24,14 @@ ul {
   width: 100%;
   height: 5rem;
   position: relative;
-  backdrop-filter: blur(20px);
-  background-color: rgba(37, 37, 37, 0.816);
+  /* backdrop-filter: blur(20px); */
+  /* background-color: rgba(37, 37, 37, 0.816); */
 
   transition: all 0.5s ease;
+}
+.c-nav_container_scrolled {
+  background-color: rgba(37, 37, 37, 0.7);
+  backdrop-filter: blur(20px);
 }
 
 .c-header_logo_container {
