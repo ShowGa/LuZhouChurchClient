@@ -11,11 +11,14 @@ import "./css/componentCSS.css";
 const Header = () => {
   return (
     <header className="c-header">
+      {/* main nav bar */}
       <div className="c-nav_container">
+        {/* left nav bar */}
         <div className="c-header_left">
           <Nav navData={navListItemsLeft} />
         </div>
 
+        {/* logo container */}
         <div className="c-header_logo_container">
           <div>
             <img className="w-16 h-16 rounded-full" src={img1} alt="" />
@@ -26,6 +29,7 @@ const Header = () => {
           </div>
         </div>
 
+        {/* right nav bar */}
         <div className="c-header_right">
           <Nav navData={navListItemsRight} />
           <ul className="mr-10 flex items-center">
@@ -39,6 +43,8 @@ const Header = () => {
           </ul>
         </div>
       </div>
+
+      {/* mobile nav bar */}
     </header>
   );
 };

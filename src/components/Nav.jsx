@@ -14,7 +14,7 @@ const renderNavItems = (items) => {
 const Nav = ({ navData }) => {
   return (
     <nav>
-      <ul className="c-nav_ul">{renderNavItems(navData)}</ul>
+      <ul className="c-nav_ul_mainItems">{renderNavItems(navData)}</ul>
     </nav>
   );
 };

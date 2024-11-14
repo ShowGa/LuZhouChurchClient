@@ -63,13 +63,13 @@ ul {
 
 /* ============================ Nav ============================ */
 
-.c-nav_ul {
+.c-nav_ul_mainItems {
   display: flex;
 }
-.c-nav_ul li {
+.c-nav_ul_mainItems li {
   font-weight: bold;
 }
-.c-nav_ul > li {
+.c-nav_ul_mainItems > li {
   /* color: black; */
   margin-left: 0.75rem;
   margin-right: 0.75rem;
